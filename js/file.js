@@ -1,0 +1,4 @@
+alert('efe');	
+jQuery(function(){
+  
+});

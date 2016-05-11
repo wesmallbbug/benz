@@ -1,0 +1,83 @@
+/*滚动条样式*/
+#wrapper {
+	position: absolute;
+	z-index: 1;
+	top: 2.0rem;
+	left: 50%;
+    -webkit-transform:translate(-50%,0);
+	bottom:10%;
+	width: 7.94375rem;
+	overflow: hidden;
+}
+#wrapperlo {
+	position: absolute;
+	z-index: 1;
+	top: 3.5rem;
+	left: 50%;
+    -webkit-transform:translate(-50%,0);
+	bottom:25%;
+	width: 17.54375rem;
+	overflow: hidden;
+}
+#wrapper2 {
+	position: absolute;
+	z-index: 1;
+	top: 7.6rem;
+	left: 50%;
+    -webkit-transform:translate(-50%,0);
+	bottom:2.75rem;
+	width: 88%;
+	overflow: hidden;
+	color: #fff;
+	font-family: "微软雅黑";
+	font-size: 0.4375rem;
+    
+}
+#wrapper3 {
+	position: absolute;
+	z-index: 1;
+	top: 2.246667rem;
+	left: 50%;
+    -webkit-transform:translate(-50%,0);
+	bottom:2.746667rem;
+	width: 7.94375rem;
+	overflow: hidden;
+    
+}
+
+#scroller {
+	position: absolute;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+#scroller ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	text-align: left;
+}
+
+
+.iScrollIndicator{
+   right: -0.1em;
+   background: rgba(255,255,255,.5)!important;
+}
+		

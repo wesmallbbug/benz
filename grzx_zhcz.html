@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>星徽尊享商旅服务</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+<!--<link href="css/animate.min.css" type="text/css" rel="stylesheet"/>-->
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/animate.min.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css"/>
+<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
+
+
+<style>
+		
+		*{padding: 0;margin: 0;}
+		
+		/*自动缩放以及loading框架*/
+		.swipe-wrap{width: 100%;height: 100%;position: relative;overflow: hidden;}
+		.swipe{position:absolute;width:100%;}
+		.swipe-box{width: 100%;overflow: hidden;}
+		
+		.m_clear{zoom:1;}
+		.m_clear:after{content:"";display:block;clear:both;}
+		.m_porR {position: relative;}
+		.m_porA {position: absolute;width: 100%;height: 100%;}
+		.m_fl {float:left;}
+		.m_fr {float:right;}
+		.m_db {display: block;}
+		.m_dn {display:none;}
+		.m_oh {overflow:hidden;}
+		.m_w100,.m_wrapper,.loadFont {width:100%;}
+		.m_mAuto {margin: 0 auto;}
+		.m_tac {text-align:center;}
+		.m_bgn {background:none;}
+		.m_fs10 {font-size:10px;}
+		.m_fs12 {font-size:12px;}
+		.m_fs14 {font-size:14px;}
+		.m_fs16 {font-size:16px;}
+		.m_fs18 {font-size:18px;}
+		.m_fs22 {font-size:22px;}
+		.m_fw {font-weight:bold;}
+		.cfff {color:#fff;}
+		.m_inpNoBg {-webkit-appearance:none;background:none;}
+		.changeWord { line-height:0;font-size:0; overflow:hidden;color:rgba(255,255,255,0);}
+		
+		/*lufylegend.js样式*/
+		.legend {position:absolute;z-index:2;font-size:0px;}
+		
+		/*loadding样式*/
+		.load {top:0;left:0;width:100%;}
+		.loadImg {width:20%;margin:60% 0 0 40%;}
+	    .loadFont{
+	    	color: #b8945c;
+	    }
+	    .loader{
+	    	position: absolute;
+	    	left: 47%;
+	    	-webkit-transform: translate(-50%,0);
+	    }
+	    
+	    
+	    /*DIV*/
+	   .cropit-image-preview {
+		  /* You can specify preview size in CSS */
+		  width:100%;
+		  height: 100%;
+		  position: absolute;
+		  top: 0;
+		  left:0;
+		  z-index: 0;
+		  /*-webkit-transform-origin:left top; 
+		  -webkit-transform: rotate(90deg);*/
+		}
+		
+		#wScratchPad2 div{
+			width: 100%;
+			height: 100%;
+			background-size: 100% 100%;
+		}
+		
+		</style>
+
+
+</head>
+<body>
+	
+	
+	<!--loading-->
+    <div class="m_porA load" >
+       <!--<div class="loadImg">   
+       	<div class="loader">
+	         <div class="loader-inner ball-spin-fade-loader">
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+	        </div>
+        </div>
+      </div>
+	   <div class="m_porA m_tac m_fs12 loadFont" style="font-size: 16px;"><br /><br /><span style="display: block;margin: 0 auto;text-align: center;margin-top: 6%;">0%<span></div>-->
+    </div>
+	
+
+	 <div class="m_wrapper" style="opacity:0;">
+	 	
+	
+	 	<img src="images/grzx_head_bg.png" class="grzx_head_bg" />
+	    <img src="images/grzx_head.png" class="grzx_head" />
+	    <div class="grzx_head"></div>
+	 	<div class="grzx_name">Gorden Wagener</div>
+	 	<div class="grzx_xxk grzx_xxk4">
+	 	  <div class="grzx_xxk_con"></div>
+	 	   <div class="grzx_xxk_con">1,00000</div>
+	 	    <div class="grzx_xxk_con"></div>
+	 	</div>
+	 	
+	 	<a href="grzx_zhcz_je.html"><img src="images/grzx_zxcz_but.png" class="grzx_zxcz_but" /></a>
+	 	
+	 	
+
+
+
+
+
+	 	
+	 	
+	 	
+	    <!--导航公用-->
+
+        
+        <!--弹窗-->
+        <div class="tc zxtc">
+           <div class="pp_con pp_con2">
+              <img src="images/zxfx.png" class="zxfx" />
+              <div class="tc_but tc_fars_but"></div>
+	          <div class="tc_but tc_xhsc_but"></div>
+	          <div class="tc_but tc_grzx_but"></div>
+	          <div class="close ppzx_close"></div>
+           </div>
+           <!--<img src="images/zxfx.png" class="zxfx" />
+           <div class="close grzx_close"></div>-->
+        </div>
+        
+        <div class="tc fwtc">
+           <div class="pp_con">
+             <img src="images/fwfx.png" class="fwfx" />
+             <div class="tc_but tc_jjfw_but"></div>
+             <div class="tc_but tc_sjfw_but"></div>
+             <div class="tc_but tc_slfw_but"></div>
+             <div class="tc_but tc_rzfw_but"></div>
+             <div class="close ppzx_close"></div>
+           </div>
+           <!--<img src="images/fwfx.png" class="fwfx" />
+           <div class="close fwzx_close"></div>
+           <div class="fwt"></div>-->
+        </div>
+        
+         <div class="tc pptc">
+           <div class="pp_con">
+             <img src="images/ppfx.png" class="ppfx" />
+             <div class="tc_but tc_hdzx_but"></div>
+             <div class="tc_but tc_fwzs_but"></div>
+             <div class="tc_but tc_kfrx_but"></div>
+             <div class="tc_but tc_zxsy_but"></div>
+             <div class="close ppzx_close"></div>
+           </div>
+        </div>
+        <!--弹窗end-->
+        
+        
+        <div class="grzx_login" style="display: none;">
+             <div class="grzx_con" >
+               <input type="text" class="grzx_tel grzx_in" value="请输入您的手机号" />
+               <input type="text" class="grzx_yzm grzx_in" value="请输入验证码" >
+               <div class="hqyzm"><span>获取验证码</span></div>
+               <div class="grzx_login_close"></div>
+               <!--<img src="images/sale_wx.png"  class="grzx_wx chec2" value="未选" />
+	           <img src="images/sale_yx.png"  class="grzx_wx grzx_yx" value="已选"  />-->
+	           <div class="error">错误</div>
+	           <div class="grzx_login_but"></div>
+             </div>
+             
+             <img class="yzcg" src="images/3sh.jpg" style="display: none;" />
+             
+        </div>
+        
+        
+        
+        
+        <!--导航-->
+         <div class="nav">
+	     	<div class="nav_bao">
+	     	  <div class="nav_but tel"><a href="tel:4008106880" style="display: block;width: 100%;height: 100%;"></a></div>	
+	     	  <div class="nav_but chionav pp" data-role="pp"><img src="images/nav_xx.jpg" class="tel_xx tel_xx1" /></div>
+	     	  <div class="nav_but chionav fw" data-role="fw"><img src="images/nav_xx.jpg" class="tel_xx" /></div>
+	     	  <div class="nav_but chionav zx" data-role="zx"><img src="images/nav_xx.jpg" class="tel_xx" /></div>
+	     	</div>
+
+	     </div>
+          
+          
+        
+        <!--导航公用end-->
+        
+        
+        
+        
+        
+	</div>
+	 
+
+
+
+	<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/iscroll.js"></script>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/grzx.js"></script>
+    <script>
+    
+     
+       Zepto('.chionav').tap(function(){
+       	jQuery('.tel_xx').hide();
+       	jQuery(this).find('.tel_xx').show();
+       	Zepto('.ppfx,.fwfx,.zxfx').removeClass('topin2');
+       	var rol=Zepto(this).attr('data-role');
+       	
+       	setTimeout(function(){
+       		Zepto('.'+rol+'fx').addClass('topin2');
+       	},50);
+       	
+       
+       });
+       
+       
+       /*兼容安卓focus*/
+       var windowh=jQuery(window).height();
+       var navflag=false;
+       jQuery(window).resize(function(){
+        
+	        jQuery('body,.sq_new_for,.grzx_login').css({
+	          "min-height":windowh+'px'
+	        });
+	        if(navflag==false){
+	          jQuery('.nav').hide();
+	          navflag=true;
+	        }else{
+	          jQuery('.nav').show();
+	          navflag=false;
+	        }
+	        
+         
+       });
+       
+       /*兼容安卓focus end*/
+   
+       Zepto('.chionav').tap(function(){
+          var tclb=Zepto(this).attr('data-role');
+          Zepto('.tc').hide();
+          Zepto('.'+tclb+'tc').show();
+       });
+       
+       
+       Zepto('.close').tap(function(){
+         Zepto(this).parent().parent('.tc').hide();
+       });
+       
+       
+       Zepto('.sq_new_but').tap(function(event){
+         setTimeout(function(){
+            Zepto('.sq_new_for').show();
+         },500);
+
+       });
+       Zepto('.grzx_new_con_close').tap(function(){
+          Zepto('.sq_new_for').hide();
+       });
+       
+         /*输入框还原*/
+      var dqv; 
+      Zepto('.grzx_in,.sqxz_in').focus(function(){
+        dqv=Zepto(this).val();
+        Zepto(this).val('');
+      });
+      
+      Zepto('.grzx_in,.sqxz_in').blur(function(){
+        if(Zepto(this).val()==""){
+           Zepto(this).val(dqv);
+        }
+      });
+      
+      
+      
+      Zepto('.tc_but').tap(function(){
+         Zepto('.tc').hide();
+      });
+      
+      Zepto('.grzx_login_close').tap(function(){
+        Zepto('.grzx_login').hide();
+      });
+      
+      Zepto('.tc_grzx_but,.li_grzx').tap(function(){
+        Zepto('.grzx_login').show();
+      });
+      
+      jQuery('.grzx_wx').bind('touchstart',function(){
+          jQuery('.grzx_wx').removeClass('chec2'); 
+          jQuery(this).siblings('.grzx_wx').addClass('chec2');
+       });
+       
+       
+       /*冗余*/
+       Zepto('.qdcx_but').tap(function(){
+         Zepto('.jjfw_tc').show();
+       });
+       
+       Zepto('.next_but').tap(function(){
+          Zepto(this).parent('.jjnext').hide();
+          Zepto('.jjqd').show();
+       });
+       
+       Zepto('.datarole').tap(function(){
+          Zepto('.bzxx').val(Zepto(this).attr('data-role'));
+       });
+       
+       
+       Zepto('.qdloc_in').focus(function(){
+          Zepto(this).val('');
+       });
+       Zepto('.qdloc_in').blur(function(){
+          if(Zepto(this).val()==''){
+            Zepto(this).val('请输入您的目的地');
+          }
+       });
+       
+       
+       Zepto('.chio_loc').tap(function(){
+         Zepto('.qdloc_in').val('请输入您的目的地');
+         Zepto('.qdloc_dd').attr('src','images/qdloc_dd2.png');
+         Zepto(this).find('.qdloc_dd').attr('src','images/qdloc_dd.png');
+       });
+       
+       
+       Zepto('.qd_but').tap(function(){
+         Zepto('.jjfw_tc').hide();
+         Zepto('.ycfw').show();
+         Zepto('.jjnext').show();
+         Zepto('.jjqd').hide();
+       });
+       
+       
+       
+       Zepto('.sj_chioce').tap(function(){
+          
+          Zepto('.kxsj').text(Zepto(this).attr('data-role'));
+          Zepto('.sj_chioce_dd').attr('src','images/qdloc_dd2.png');
+          Zepto(this).find('.sj_chioce_dd').attr('src','images/qdloc_dd.png');
+       });
+       
+       Zepto('.kxsj').tap(function(){
+         Zepto('.ycfw').hide();
+         Zepto('.sjtj').show();
+       });
+       
+       
+       Zepto('.sjqd').tap(function(){
+         Zepto('.ycfw').show();
+         Zepto('.sjtj').hide();
+       });
+       
+       Zepto('.qxdd').tap(function(){
+          Zepto('.yycg,.ycfw,.jjfw').hide();
+       });
+       
+       Zepto('.ljzf').tap(function(){
+         Zepto('.ycfw').hide();
+         Zepto('.yycg').show();
+       });
+
+       Zepto('.ioc').tap(function(){
+         Zepto('.jjfw_tc').hide();
+         Zepto('.qdloc').show();
+       });
+       
+       Zepto('.locqd').tap(function(){
+          Zepto('.qdloc').hide();
+          Zepto('.jjfw_tc').show();
+       });
+  
+       /*冗余end*/
+  
+  
+    
+  
+  
+    </script>
+
+
+
+
+ 
+
+</body>
+</html>

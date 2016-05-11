@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>星徽尊享商旅服务</title>
+<meta name="format-detection" content="telephone=no" />
+<!--解决iphone safari浏览器在页面加载完之后会自动将数字改为tel标签，即解释为号码，这样就能产生拨号。-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+<!--<link href="css/animate.min.css" type="text/css" rel="stylesheet"/>-->
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/animate.min.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css"/>
+<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
+
+
+<style>
+		
+		*{padding: 0;margin: 0;}
+		
+		/*自动缩放以及loading框架*/
+		.swipe-wrap{width: 100%;height: 100%;position: relative;overflow: hidden;}
+		.swipe{position:absolute;width:100%;}
+		.swipe-box{width: 100%;overflow: hidden;}
+		
+		.m_clear{zoom:1;}
+		.m_clear:after{content:"";display:block;clear:both;}
+		.m_porR {position: relative;}
+		.m_porA {position: absolute;width: 100%;height: 100%;}
+		.m_fl {float:left;}
+		.m_fr {float:right;}
+		.m_db {display: block;}
+		.m_dn {display:none;}
+		.m_oh {overflow:hidden;}
+		.m_w100,.m_wrapper,.loadFont {width:100%;}
+		.m_mAuto {margin: 0 auto;}
+		.m_tac {text-align:center;}
+		.m_bgn {background:none;}
+		.m_fs10 {font-size:10px;}
+		.m_fs12 {font-size:12px;}
+		.m_fs14 {font-size:14px;}
+		.m_fs16 {font-size:16px;}
+		.m_fs18 {font-size:18px;}
+		.m_fs22 {font-size:22px;}
+		.m_fw {font-weight:bold;}
+		.cfff {color:#fff;}
+		.m_inpNoBg {-webkit-appearance:none;background:none;}
+		.changeWord { line-height:0;font-size:0; overflow:hidden;color:rgba(255,255,255,0);}
+		
+		/*lufylegend.js样式*/
+		.legend {position:absolute;z-index:2;font-size:0px;}
+		
+		/*loadding样式*/
+		.load {top:0;left:0;width:100%;}
+		.loadImg {width:20%;margin:60% 0 0 40%;}
+	    .loadFont{
+	    	color: #b8945c;
+	    }
+	    .loader{
+	    	position: absolute;
+	    	left: 47%;
+	    	-webkit-transform: translate(-50%,0);
+	    }
+	    
+	    /*滚动条样式*/
+		#wrapper,
+		#wrapper2 {
+			position: absolute;
+			z-index: 1;
+			left: 50%;
+			-webkit-transform: translate(-50%,0);
+			overflow: hidden;
+		}
+		
+		
+		#scroller {
+			position: absolute;
+			z-index: 1;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			width: 100%;
+			-webkit-transform: translateZ(0);
+			-moz-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			-o-transform: translateZ(0);
+			transform: translateZ(0);
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			-webkit-text-size-adjust: none;
+			-moz-text-size-adjust: none;
+			-ms-text-size-adjust: none;
+			-o-text-size-adjust: none;
+			text-size-adjust: none;
+		}
+		
+		#scroller ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			text-align: left;
+		}
+		
+
+        .iScrollIndicator{
+           right: -0.1em;
+           background: rgba(255,255,255,0)!important;
+        }
+		
+		
+		/*a{text-decoration:none;color: #CEAD7A;}*/
+		
+		
+		</style>
+
+
+</head>
+<body>
+	
+	
+	<!--loading-->
+    <div class="m_porA load" >
+       <!--<div class="loadImg">   
+       	<div class="loader">
+	         <div class="loader-inner ball-spin-fade-loader">
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+	        </div>
+        </div>
+      </div>
+	   <div class="m_porA m_tac m_fs12 loadFont" style="font-size: 16px;"><br /><br /><span style="display: block;margin: 0 auto;text-align: center;margin-top: 6%;">0%<span></div>-->
+    </div>
+	
+
+	 <div class="m_wrapper" style="opacity:0;">
+	 	
+	 	<img src="images/fs_top_lan.jpg" class="fs_top_lan" />
+	 	<div class="fs_but">
+		 	 <a href="sale_kfs.html"><div class="fs_but_left">
+		 	    <div class="fs_text">可发送　<span>( 3 )</span></div>
+		 	 </div></a>
+		 	 <div class="fs_but_right">
+		 	   <img src="images/fs_tapc.jpg" class="fs_tapc" />
+		 	   <div class="fs_text">已发送　<span>( 2 )</span></div>
+		 	 </div>
+	 	</div>
+	    
+
+	    <!--车型配置-->
+		<div id="wrapper" class="gdt">
+			<div id="scroller">
+		
+				<div class="h_tab">
+					<div class="h_tab_top">
+						<div class="h_tap_text"><span class="te" style="display: block;">迈巴赫父爱如山活动用车卡</span></div>
+						<!--<img src="images/yfs_zk.png" class="yfs_zk" />-->
+						<div class="fs_butgai" sj="0"></div>
+					</div>
+					<div class="h_tab_bottom">
+						<div class="zd_text">
+							<div class="te_le">活动声明:</div>
+							<div class="te_re">迈巴赫60公里2小时 异地用车卡</div>
+							<div class="focusd"></div>
+						</div>
+						<div class="zd_text">
+							<div class="te_le">截止日期:</div>
+							<div class="te_re">2015-10-01</div>
+							<div class="focusd"></div>
+						</div>
+						<div class="zd_text">
+							<div class="te_le">卡　　号:</div>
+							<div class="te_re">rgr4g51</div>
+							<div class="focusd"></div>
+						</div>
+						<div class="sz_box sz_box1">
+							<div class="szt szt1">
+								<div class="szt_con">
+									<span class="sp1">未领取</span>
+								</div>
+								<div class="szt_con">
+									<span>未使用</span>
+								</div>
+								<div class="szt_con szt_con3">
+									<span class="sp3">2 <img src="images/xq.jpg" class="xq" /></span>
+								</div>
+							</div>
+				
+						</div>
+						<div class="zd_text">
+							<div class="te_le">领取时间:</div>
+							<div class="te_re">2015 - 8 - 27</div>
+							<div class="focusd"></div>
+						</div>
+						<div class="zd_text">
+							<div class="te_le">领取用户:</div>
+							<div class="te_re" style="color: #000!important;">13811905731</div>
+							<div class="focusd"></div>
+						</div>
+					</div>
+				</div>
+				<div class="h_tab">
+					<div class="h_tab_top">
+						<div class="h_tap_text"><span class="te" style="display: block;">迈巴赫父爱如山活动用车卡</span></div>
+						<!--<img src="images/yfs_zk.png" class="yfs_zk" />-->
+						<div class="fs_butgai" sj="0"></div>
+					</div>
+					<div class="h_tab_bottom">
+						<div class="zd_text">
+							<div class="te_le">活动声明:</div>
+							<div class="te_re">迈巴赫60公里2小时 异地用车卡</div>
+							<div class="focusd"></div>
+						</div>
+						<div class="zd_text">
+							<div class="te_le">截止日期:</div>
+							<div class="te_re">2015-10-01</div>
+							<div class="focusd"></div>
+						</div>
+						<div class="zd_text">
+							<div class="te_le">卡　　号:</div>
+							<div class="te_re">rgr4g51</div>
+							<div class="focusd"></div>
+						</div>
+						<div class="sz_box sz_box1">
+							<div class="szt szt1 szt_bg2">
+								<div class="szt_con szt_con2">
+									<span class="sp11">已领取</span>
+								</div>
+								<div class="szt_con szt_con2">
+									<span>未使用</span>
+								</div>
+							</div>
+				
+						</div>
+						<div class="zd_text">
+							<div class="te_le">领取时间:</div>
+							<div class="te_re">2015 - 8 - 27</div>
+							<div class="focusd"></div>
+						</div>
+						<div class="zd_text">
+							<div class="te_le">领取用户:</div>
+							<div class="te_re" style="color: #000!important;">13811905731</div>
+							<div class="focusd"></div>
+						</div>
+					</div>
+				</div>
+                <div class="h_tab">
+				   <div class="h_tab_top">
+				      <div class="h_tap_text"><span class="te" style="display: block;">迈巴赫父爱如山活动用车卡</span></div>
+				      <!--<img src="images/yfs_zk.png" class="yfs_zk" />-->
+				      <div class="fs_butgai" sj="3"></div>
+				   </div>
+				   <div class="h_tab_bottom">
+				      <div class="zd_text">
+					      <div class="te_le">活动声明:</div>
+					      <div class="te_re">迈巴赫60公里2小时 异地用车卡</div>
+					      <div class="focusd"></div>
+				     </div>
+				      <div class="zd_text">
+					      <div class="te_le">截止日期:</div>
+					      <div class="te_re">2015-10-01</div>
+					      <div class="focusd"></div>
+				     </div>
+				      <div class="sz_box">
+				        <div class="szt szt1 szt_bg2">
+								<div class="szt_con szt_con2">
+									<span class="sp11">已领取</span>
+								</div>
+								<div class="szt_con szt_con2">
+									<span>未使用</span>
+								</div>
+							</div>
+				        <div class="tim_js"><span>还剩21小时33分22秒可再次发送</span></div>
+				      </div>
+				   </div>
+				</div>
+		        
+                
+                
+			</div>
+		</div>
+	
+	    <div class="sale_loginout">
+	    	<img class="aniuh1" src="images/logout.png" style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;opacity: 0;" />
+	       <img class="aniuh" src="images/logout2.png" style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;" />
+	    </div>
+	    
+	    <img src="images/xgmm.png" class="xgmm" />
+	    
+	    
+	    <div class="fsts" style="display: none;">
+	      <img src="images/fsfx.png" class="fsfx" />
+	      <div class="fsfx_close"></div>
+	    </div>
+	    
+	    
+	    <div class="fs_xgmm" style="display: none;">
+	       <div class="fs_xgmm_bg">
+	         <img src="images/fs_xgmm_bg.png"  style="width: 100%;height: 100%;" />
+	         <input type="text" class="sale_gm_op gmp" index="1" value="原密码"  />
+	         <input type="text" class="sale_gm_np gmp" index="2" value="新密码"  />
+	         <input type="text" class="sale_gm_qnp gmp" index="3" value="确认新密码"  />
+	         <div class="gm_close"></div>
+	         <div class="error error3">错误</div>
+	         <div class="gm_qd"></div>
+	       </div>
+	       
+	    </div>
+	  
+	     <div class="zfcs" style="display: none;">
+	       <div class="zfcs_con">
+	         <div class="cs_num">转发次数　2</div>
+	         <div id="wrapper2" class="zfcs_text">
+				 <div id="scroller">
+			        <div class="csxq">
+				        <img src="images/cs_head.png" class="cs_head" />
+				        <div class="cs_xx">
+				         <span class="yhm">我　13811906731</span><br />
+				         <span class="cs_time">2015/11/18　16:32</span>
+				        </div>
+			            <div class="cs_tsy">发送成功</div>
+			        </div>
+				    <div class="csxq">
+				        <img src="images/cs_head.png" class="cs_head" />
+				        <div class="cs_xx">
+				         <span class="yhm">用户　13811906731</span><br />
+				         <span class="cs_time">2015/11/18　16:32</span>
+				        </div>
+				        <div class="cs_tsy">转发成功</div>
+			        </div>
+				     <div class="csxq">
+				        <img src="images/cs_head.png" class="cs_head" />
+				        <div class="cs_xx">
+				         <span class="yhm">用户　13811906731</span><br />
+				         <span class="cs_time">2015/11/18　16:32</span>
+				        </div>
+				        <div class="cs_tsy">使用成功</div>
+			        </div>
+				     <div class="csxq">
+				        <img src="images/cs_head.png" class="cs_head" />
+				        <div class="cs_xx">
+				         <span class="yhm">我　13811906731</span><br />
+				         <span class="cs_time">2015/11/18　16:32</span>
+				        </div>
+			            <div class="cs_tsy">发送成功</div>
+			        </div>
+				    
+				</div>
+			</div>
+	         <div class="cs_close"></div>
+	       </div>
+	     </div>
+	  
+	  
+	 </div>
+	 
+
+
+
+	<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/sale.js"></script>
+    <script>
+    
+      /*兼容安卓focus*/
+       var windowh=jQuery(window).height();
+       jQuery(window).resize(function(){
+        
+	        jQuery('body,.fs_xgmm').css({
+	          "min-height":windowh+'px'
+	        });
+	        
+	        
+         
+       });
+       
+       /*兼容安卓focus end*/
+      
+      
+//    jQuery('.fs_butgai').bind('touchstart',function(){
+//       jQuery(this).siblings('.yfs_zk').toggleClass('yfs_zk_rotate');
+//    });
+      
+      Zepto('.fsfx_close').tap(function(){
+        Zepto('.fsts').hide();
+      });
+     
+      
+       
+      var dqv; 
+      Zepto('.gmp').focus(function(){
+        dqv=Zepto(this).val();
+        Zepto(this).val('');
+      });
+      
+      Zepto('.gmp').blur(function(){
+        if(Zepto(this).val()==""){
+           Zepto(this).val(dqv);
+        }
+      });
+
+
+     Zepto('.xgmm').tap(function(){
+       Zepto('.fs_xgmm').show();
+     });
+     
+     Zepto('.gm_close').tap(function(){
+       Zepto('.fs_xgmm').hide();
+     });
+     
+     
+     Zepto('.cs_close').tap(function(){
+       Zepto('.zfcs').hide();
+     });
+     
+     
+     Zepto('.szt_con3').tap(function(){
+        Zepto('.zfcs').show();
+        loadedIscrollo2();
+      });
+     
+     
+//   jQuery('.sz_box').slideUp(1);
+//   jQuery('.sz_box').eq(0).slideDown(1);
+//   jQuery('.yfs_zk').eq(0).addClass('yfs_zk_rotate');
+//   jQuery('.fs_butgai').bind('touchstart',function(){
+//      jQuery('.sz_box').eq(jQuery(this).attr('sj')).slideToggle(1);
+//      setTimeout(function(){
+//        loadedIscrollo();
+//      },500);
+//      
+//   });
+     
+     
+     jQuery('.aniuh').bind('touchstart',function(){
+     	jQuery('.aniuh1').css('opacity',1);
+     	jQuery(this).css('opacity',0);
+     });
+     jQuery('.aniuh').bind('touchend',function(){
+     	jQuery('.aniuh1').css('opacity',0);
+     	jQuery(this).css('opacity',1);
+     });
+      
+    </script>
+    
+    
+   	<script src="js/ziscroll.js"></script>
+	<script>
+	
+	var myScroll;
+	
+	function loadedIscrollo () {
+		myScroll = new IScroll('#wrapper', {
+			scrollbars: true,
+			mouseWheel: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'scale',
+			fadeScrollbars: true
+		});
+	}
+	
+	
+	var myScroll2;
+	
+	function loadedIscrollo2 () {
+		myScroll2 = new IScroll('#wrapper2', {
+			scrollbars: true,
+			mouseWheel: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'scale',
+			fadeScrollbars: true
+		});
+	}
+	
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	</script>
+   
+    
+    
+
+
+    
+
+</body>
+</html>

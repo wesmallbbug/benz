@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>星徽尊享商旅服务</title>
+<meta name="format-detection" content="telephone=no" />
+<!--解决iphone safari浏览器在页面加载完之后会自动将数字改为tel标签，即解释为号码，这样就能产生拨号。-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+<!--<link href="css/animate.min.css" type="text/css" rel="stylesheet"/>-->
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/animate.min.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css"/>
+<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
+
+
+<style>
+		
+		*{padding: 0;margin: 0;}
+		
+		/*自动缩放以及loading框架*/
+		.swipe-wrap{width: 100%;height: 100%;position: relative;overflow: hidden;}
+		.swipe{position:absolute;width:100%;}
+		.swipe-box{width: 100%;overflow: hidden;}
+		
+		.m_clear{zoom:1;}
+		.m_clear:after{content:"";display:block;clear:both;}
+		.m_porR {position: relative;}
+		.m_porA {position: absolute;width: 100%;height: 100%;}
+		.m_fl {float:left;}
+		.m_fr {float:right;}
+		.m_db {display: block;}
+		.m_dn {display:none;}
+		.m_oh {overflow:hidden;}
+		.m_w100,.m_wrapper,.loadFont {width:100%;}
+		.m_mAuto {margin: 0 auto;}
+		.m_tac {text-align:center;}
+		.m_bgn {background:none;}
+		.m_fs10 {font-size:10px;}
+		.m_fs12 {font-size:12px;}
+		.m_fs14 {font-size:14px;}
+		.m_fs16 {font-size:16px;}
+		.m_fs18 {font-size:18px;}
+		.m_fs22 {font-size:22px;}
+		.m_fw {font-weight:bold;}
+		.cfff {color:#fff;}
+		.m_inpNoBg {-webkit-appearance:none;background:none;}
+		.changeWord { line-height:0;font-size:0; overflow:hidden;color:rgba(255,255,255,0);}
+		
+		/*lufylegend.js样式*/
+		.legend {position:absolute;z-index:2;font-size:0px;}
+		
+		/*loadding样式*/
+		.load {top:0;left:0;width:100%;}
+		.loadImg {width:20%;margin:60% 0 0 40%;}
+	    .loadFont{
+	    	color: #b8945c;
+	    }
+	    .loader{
+	    	position: absolute;
+	    	left: 47%;
+	    	-webkit-transform: translate(-50%,0);
+	    }
+	    
+	    /*滚动条样式*/
+		#wrapper {
+			position: absolute;
+			z-index: 1;
+			left: 50%;
+			-webkit-transform: translate(-50%,0);
+			overflow: hidden;
+		}
+		
+		
+		#scroller {
+			position: absolute;
+			z-index: 1;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			width: 100%;
+			-webkit-transform: translateZ(0);
+			-moz-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			-o-transform: translateZ(0);
+			transform: translateZ(0);
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			-webkit-text-size-adjust: none;
+			-moz-text-size-adjust: none;
+			-ms-text-size-adjust: none;
+			-o-text-size-adjust: none;
+			text-size-adjust: none;
+		}
+		
+		#scroller ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			text-align: left;
+		}
+		
+
+        .iScrollIndicator{
+           right: -0.1em;
+           background: rgba(255,255,255,0)!important;
+        }
+		
+		
+		
+		</style>
+
+
+</head>
+<body>
+	
+	
+	<!--loading-->
+    <div class="m_porA load" >
+       <!--<div class="loadImg">   
+       	<div class="loader">
+	         <div class="loader-inner ball-spin-fade-loader">
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+		          <div></div>
+	        </div>
+        </div>
+      </div>
+	   <div class="m_porA m_tac m_fs12 loadFont" style="font-size: 16px;"><br /><br /><span style="display: block;margin: 0 auto;text-align: center;margin-top: 6%;">0%<span></div>-->
+    </div>
+	
+
+	 <div class="m_wrapper" style="opacity:0;">
+	 	
+	 	<img src="images/fs_top_lan.jpg" class="fs_top_lan" />
+	 	<div class="fs_but">
+		 	 <div class="fs_but_left">
+		 	    <img src="images/fs_tapc.jpg" class="fs_tapc" />
+		 	    <div class="fs_text"><span>按时间</span></div>
+		 	 </div>
+		 	 <div class="fs_but_right">
+		 	   <div class="fs_text">按状态</span></div>
+		 	 </div>
+	 	</div>
+	    
+	    <div class="ddzt_con">
+	      
+	      <div class="ddzt_con_tplan">
+	        <span>订单状态：派单中</span>
+	      </div>
+	      
+	      <div id="wrapper" class="ddzt_text">
+			 
+				 <div id="scroller">
+			        <div class="dzf_li">
+			          <img src="images/dd.png" class="dzf_dd" />
+			          <div class="dzf_li_left">订　　单:</div>
+			          <div class="dzf_li_right">2001121200212221251</div>
+			        </div>
+			         <div class="dzf_li">
+			          <img src="images/dd.png" class="dzf_dd" />
+			          <div class="dzf_li_left">金　　额:</div>
+			          <div class="dzf_li_right">100000元</div>
+			        </div>
+			         <div class="dzf_li">
+			          <img src="images/dd.png" class="dzf_dd" />
+			          <div class="dzf_li_left">航班号  :</div>
+			          <div class="dzf_li_right">A00008</div>
+			        </div>
+			         <div class="dzf_li">
+			          <img src="images/dd.png" class="dzf_dd" />
+			          <div class="dzf_li_left">接机时间:</div>
+			          <div class="dzf_li_right">2015-07-05</div>
+			        </div>
+			         <div class="dzf_li">
+			          <img src="images/dd.png" class="dzf_dd" />
+			          <div class="dzf_li_left">送达地点:</div>
+			          <div class="dzf_li_right">北京市朝阳区贡院六号E座13层北京市朝阳区贡院六号E座13层</div>
+			        </div>
+			         <div class="dzf_li">
+			          <img src="images/dd.png" class="dzf_dd" />
+			          <div class="dzf_li_left">服务车型:</div>
+			          <div class="dzf_li_right">迈巴赫S600</div>
+			        </div>
+			         <div class="dzf_li">
+			          <img src="images/dd.png" class="dzf_dd" />
+			          <div class="dzf_li_left">乘客姓名:</div>
+			          <div class="dzf_li_right">张朝阳</div>
+			        </div>
+			         <div class="dzf_li">
+			          <img src="images/dd.png" class="dzf_dd" />
+			          <div class="dzf_li_left">乘客电话:</div>
+			          <div class="dzf_li_right">13915682680</div>
+			        </div>
+			         <div class="dzf_li">
+			          <img src="images/dd.png" class="dzf_dd" />
+			          <div class="dzf_li_left">备注信息:</div>
+			          <div class="dzf_li_right">需要拿铁咖啡</div>
+			        </div>
+				 </div>
+			
+
+			</div>
+	
+          	<img class="botto" src="images/grzx_xz_botmbo.png" style="width: 90%;position: absolute;height: 1px;left: 50%;-webkit-transform: translate(-50%,0);" />
+				
+	
+	      <div class="siji_xx">
+	         <img src="images/ico_tout.png" class="ico_tout" />
+	         <div class="ico_tout"></div>
+	         <span class="fwsjj fwsjj2">服务司机：张师傅</span>
+	         <img src="images/ypj_but.png" class="bh_but pj_but" />
+	      </div>
+	      
+	      <img src="images/syfp_but.png" class="ljzf_but qxdd_but syfp_but"  />
+	      
+	    </div>
+	    
+	    
+	    
+	  <div class="fpkj_tc" style="display: none;">
+	     <div class="fpkj_tc_con">
+	       <div class="error error5" >错误</div>
+	       <input type="text" class="fpkj_fptt" value="发票抬头" />
+	       <select class="fpkj_fwf">
+	         <option selected="selected">服务费</option>
+	       </select>
+	       <input type="text" value="最高可开金额350.40元" class="fpkj_kkje" />
+	       <input type="text" value="邮寄地址" class="fpkj_yjdz" />
+	       <input type="text" value="收件人" class="fpkj_sjr" />
+	       <input type="text" value="联系电话" class="fpkj_tel" />
+	       <div class="fpkj_close"></div>
+	       <div class="fpkj_tj"></div>
+	       
+	     </div>
+	   </div>
+	 
+	    
+	    
+	    
+	    
+	    
+
+	   
+	    <!--导航公用-->
+
+        
+        <!--弹窗-->
+        <div class="tc zxtc">
+           <div class="pp_con pp_con2">
+              <img src="images/zxfx.png" class="zxfx" />
+              <div class="tc_but tc_fars_but"></div>
+	          <div class="tc_but tc_xhsc_but"></div>
+	          <div class="tc_but tc_grzx_but"></div>
+	          <div class="close ppzx_close"></div>
+           </div>
+           <!--<img src="images/zxfx.png" class="zxfx" />
+           <div class="close grzx_close"></div>-->
+        </div>
+        
+        <div class="tc fwtc">
+           <div class="pp_con">
+             <img src="images/fwfx.png" class="fwfx" />
+             <div class="tc_but tc_jjfw_but"></div>
+             <div class="tc_but tc_sjfw_but"></div>
+             <div class="tc_but tc_slfw_but"></div>
+             <div class="tc_but tc_rzfw_but"></div>
+             <div class="close ppzx_close"></div>
+           </div>
+           <!--<img src="images/fwfx.png" class="fwfx" />
+           <div class="close fwzx_close"></div>
+           <div class="fwt"></div>-->
+        </div>
+        
+         <div class="tc pptc">
+           <div class="pp_con">
+             <img src="images/ppfx.png" class="ppfx" />
+             <div class="tc_but tc_hdzx_but"></div>
+             <div class="tc_but tc_fwzs_but"></div>
+             <div class="tc_but tc_kfrx_but"></div>
+             <div class="tc_but tc_zxsy_but"></div>
+             <div class="close ppzx_close"></div>
+           </div>
+        </div>
+        <!--弹窗end-->
+        
+        
+        <div class="grzx_login" style="display: none;">
+             <div class="grzx_con" >
+               <input type="text" class="grzx_tel grzx_in" value="请输入您的手机号" />
+               <input type="text" class="grzx_yzm grzx_in" value="请输入验证码" >
+               <div class="hqyzm"><span>获取验证码</span></div>
+               <div class="grzx_login_close"></div>
+               <!--<img src="images/sale_wx.png"  class="grzx_wx chec2" value="未选" />
+	           <img src="images/sale_yx.png"  class="grzx_wx grzx_yx" value="已选"  />-->
+	           <div class="error">错误</div>
+	           <div class="grzx_login_but"></div>
+             </div>
+             
+             <img class="yzcg" src="images/3sh.jpg" style="display: none;" />
+             
+        </div>
+        
+        
+        
+        
+        <!--导航-->
+         <div class="nav">
+	     	<div class="nav_bao">
+	     	  <div class="nav_but tel"><a href="tel:4008106880" style="display: block;width: 100%;height: 100%;"></a></div>	
+	     	  <div class="nav_but chionav pp" data-role="pp"><img src="images/nav_xx.jpg" class="tel_xx tel_xx1" /></div>
+	     	  <div class="nav_but chionav fw" data-role="fw"><img src="images/nav_xx.jpg" class="tel_xx" /></div>
+	     	  <div class="nav_but chionav zx" data-role="zx"><img src="images/nav_xx.jpg" class="tel_xx" /></div>
+	     	</div>
+
+	     </div>
+          
+          
+        
+        <!--导航公用end-->
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	 </div>
+	 
+
+
+
+	<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/grzx.js"></script>
+    <script>
+    
+    
+    
+    
+       Zepto('.chionav').tap(function(){
+       	jQuery('.tel_xx').hide();
+       	jQuery(this).find('.tel_xx').show();
+       	Zepto('.ppfx,.fwfx,.zxfx').removeClass('topin2');
+       	var rol=Zepto(this).attr('data-role');
+       	
+       	setTimeout(function(){
+       		Zepto('.'+rol+'fx').addClass('topin2');
+       	},50);
+       	
+       
+       });
+      
+      /*兼容安卓focus*/
+       var windowh=jQuery(window).height();
+       var navflag=false;
+       jQuery(window).resize(function(){
+        
+	        jQuery('body,.sq_new_for,.grzx_login,.fpkj_tc').css({
+	          "min-height":windowh+'px'
+	        });
+	        if(navflag==false){
+	          jQuery('.nav').hide();
+	          navflag=true;
+	        }else{
+	          jQuery('.nav').show();
+	          navflag=false;
+	        }
+	        
+         
+       });
+       
+       /*兼容安卓focus end*/
+      
+      
+       Zepto('.chionav').tap(function(){
+          var tclb=Zepto(this).attr('data-role');
+          Zepto('.tc').hide();
+          Zepto('.'+tclb+'tc').show();
+       });
+       
+       
+       Zepto('.close').tap(function(){
+         Zepto(this).parent().parent('.tc').hide();
+       });
+      
+      
+      /*nav end*/
+      
+    
+      Zepto('.fs_butgai').tap(function(){
+        Zepto('.fsts').show();
+      });
+      
+      Zepto('.fsfx_close').tap(function(){
+        Zepto('.fsts').hide();
+      });
+     
+       
+        /*输入框还原*/
+      var dqv; 
+      Zepto('.grzx_in,.sqxz_in,.grxx_sh,.grxx_si,.grxx_xxdz,.grzx_xgdh input,.fpkj_fptt,.fpkj_kkje,.fpkj_yjdz,.fpkj_sjr,.fpkj_tel').focus(function(){
+        dqv=Zepto(this).val();
+        Zepto(this).val('');
+      });
+      
+      Zepto('.grzx_in,.sqxz_in,.grxx_sh,.grxx_si,.grxx_xxdz,.grzx_xgdh input,.fpkj_fptt,.fpkj_kkje,.fpkj_yjdz,.fpkj_sjr,.fpkj_tel').blur(function(){
+        if(Zepto(this).val()==""){
+           Zepto(this).val(dqv);
+        }
+      });
+
+
+     Zepto('.xgmm').tap(function(){
+       Zepto('.fs_xgmm').show();
+     });
+     
+     Zepto('.gm_close').tap(function(){
+       Zepto('.fs_xgmm').hide();
+     });
+     
+      
+    Zepto('.qxdd_close').tap(function(){
+      Zepto('.ydcg_qxdd').hide();
+    });
+      
+      
+    Zepto('.qxdd_but').tap(function(){
+      Zepto('.ydcg_qxdd').show();
+    });
+      
+    Zepto('.syfp_but').tap(function(){
+    	Zepto('.fpkj_tc').show();
+    });
+    
+    Zepto('.fpkj_close').tap(function(){
+    	Zepto('.fpkj_tc').hide();
+    });
+    
+      
+      
+    </script>
+    
+    
+   	<script src="js/ziscroll.js"></script>
+	<script>
+	
+	
+	
+	
+	
+	var myScroll;
+	
+	function loadedIscrollo () {
+		myScroll = new IScroll('#wrapper', {
+			scrollbars: true,
+			mouseWheel: true,
+			interactiveScrollbars: true,
+			shrinkScrollbars: 'scale',
+			fadeScrollbars: true
+		});
+	}
+	
+	
+//	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	</script>
+   
+    
+    
+
+
+    
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>星徽尊享商旅服务</title>
+<meta name="format-detection" content="telephone=no" />
+<!--解决iphone safari浏览器在页面加载完之后会自动将数字改为tel标签，即解释为号码，这样就能产生拨号。-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui"/>
+<!--<link href="css/animate.min.css" type="text/css" rel="stylesheet"/>-->
+
+<style type="text/css">
+  *{
+  	margin: 0;
+  	padding: 0;
+  }
+</style>
+
+</head>
+<body style="background: #000;">
+	
+	
+	<!--loading-->
+
+
+	 <div class="m_wrapper" style="opacity:1;">
+	 	
+	 	<img class="fwzsbut1" src="images/fwzsbut1.png" style="position:fixed;left: 0;top: 0;width: 100%;" />
+	 	<img class="fwzsbut2" src="images/fwzsbut2.png" style="position:fixed;left: 0;top: 0;width: 100%;display: none;" />
+	 	
+	    <img class="fwzsimg" src="images/fwzs1.png" style="width: 100%;height: auto;margin-bottom:150px;" />
+	    <img class="fwzsimg" src="images/fwzs2.png" style="width: 100%;height: auto;display: none;" />
+        
+	</div>
+	 
+    
+    
+    
+
+
+	<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/zepto.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		$('.fwzsimg').css({
+    			"margin-top":$('.fwzsbut').height()+'px'
+    		});
+    		
+    		$(document).delegate('.fwzsbut1','touchstart',function(){
+    			$(this).hide();
+    			$('.fwzsbut2').show();
+    			$('.fwzsimg').hide();
+    			$('.fwzsimg').eq($(this).index()+1).show();
+    		});
+    		$(document).delegate('.fwzsbut2','touchstart',function(){
+    			$(this).hide();
+    			$('.fwzsbut1').show();
+    			$('.fwzsimg').hide();
+    			$('.fwzsimg').eq($(this).index()-1).show();
+    		});
+    		
+    	});
+    </script>
+    
+
+
+
+
+
+
+
+
+   
+</body>
+</html>
